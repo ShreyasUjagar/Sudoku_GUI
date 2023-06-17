@@ -1,6 +1,6 @@
 # Sudoku GUI (Graphic Interface Model) by Shreyas Ujagar
 
-This is a Sudoku game implemented with Python. In order to play it you need to have pygame installed on your system (as this project uses the Pygame library) 
+This is a Sudoku game implemented with the Python language and the Pygame Library. In order to play, you would need to have both installed on your system.
 
 It consists of several features such as an instant time solver, a checker that provides clear feedback, and a handful of additional puzzles.
 
@@ -11,7 +11,7 @@ The solver then inputs the next valid number into that previous slot and we cont
 
 Please note that the solutions for the puzzles are **not hardcoded** into the game and the solver gets to an answer each and every time.
 
-I hope you enjoy this project as much as I enjoyed making it :)
+I hope you enjoy playing this as much as I enjoyed making it :)
 
 
 
