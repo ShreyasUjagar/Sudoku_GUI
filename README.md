@@ -7,11 +7,11 @@ It consists of several features including a robust instant time solver, a razor-
 
 The solver implements a **recursive backtracking** algorithm that works as follows:
 starting at the top-most row, moving from left to right, the solver seeks the first empty slot.
-Once that empty slot is found, it starts checking for a valid digit it can enter in... So the solver busily starts trying out each digit, iterating from 1 to 9 and enters the first valid number it finds. The process continues on recursively as it searches for the next empty slot (...until the puzzle has been solved).
-However, if it reaches a slot where every number from 1-9 is invalid, then it 'backtracks' and returns to the previous slot.
-The solver then inputs the next valid number found into that previous slot and we continue moving forward. This way, the solver will effeciently get to a solution in real time.
+Once that empty slot is found, it starts checking for a valid digit it can enter in... So the solver busily begins iterating from 1 to 9, and enters the first valid number it finds. Now the quest for the next empty slot begins and this process continues on recursively (...until the solver moves down to the last row and the puzzle has been solved).
+**However**, if the solver reaches a slot where every number from 1-9 is invalid, it 'backtracks' and returns to the previous slot it editted.
+Here, the next valid number found is entered (into that previous slot) and we continue moving forward. This way, the solver will effeciently get to a solution in real time.
 
-How does it know if a number is valid or not at a certain position? The solver gets this information by calling an 'is_valid' method that takes as parameters the digit at the slot, and the position of that slot (row,col) and linearly checks if there are any number conflicts. The method will then accordingly return either the boolean value 'True' or 'False' back to the solver.
+How does it know if a number is valid or not at a certain position? The solver gets this information by calling an 'is_valid' method that takes as parameters the digit at the slot, and the position of that slot (row,col) and linearly checks if there are any number conflicts. The method will then accordingly return the boolean value 'True' or 'False' back to the solver.
 
 Please note that the solutions for the puzzles are **not hardcoded** into the game and the solver gets to an answer each and every time.
 
