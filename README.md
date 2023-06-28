@@ -5,10 +5,11 @@ This is a Sudoku game implemented with the Python language and the Pygame Librar
 
 It consists of several features including a robust instant time solver, a razor-sharp checker that validates any user input, and an abundance of additional puzzles.
 
-The solver implements a **recursive backtracking** algorithm that works as follows:
-starting at the top-most row, moving from left to right, the solver seeks the first empty slot.
+## The Solver's Recursive Backtracking Algorithm
+
+Starting at the top-most row, moving from left to right, the solver seeks the first empty slot.
 Once that empty slot is found, it starts checking for a valid digit it can pencil in (a valid digit is one that does not conflict with any other entry within the same row, column and 3x3 square). So the solver busily begins iterating from 1 to 9, and enters the first number that is valid. Now a 'recursive call' is made to the solver method and the quest for the next empty slot begins. This process continues until the solver moves down to the last row and the puzzle has been solved.
-**However**, if the solver reaches an empty slot where every number from 1-9 is invalid, it 'backtracks' and returns to the previous slot it editted.
+**However**, if the solver reaches an empty slot where every number from 1-9 is invalid, it 'backtracks' and returns to the previous slot it edited.
 Here, the next valid number is entered (into that previous slot) and we continue moving forward. This way, the solver effeciently gets to a solution in real time.
 
 But how does it know if a number is valid or not at a certain position? The solver gets this information by calling an 'is_valid' method that takes as parameters the digit at the slot, and the position of that slot (row,col) and linearly checks if there are any number conflicts. The method will then accordingly return the boolean value 'True' or 'False' back to the solver.
