@@ -15,16 +15,7 @@ I hope you enjoy playing this as much as I enjoyed making it :)
 
 
 
-I have used the following youtube videos that have helped me understand this algorithm and the Pygame tool which are cited below.
+https://github.com/ShreyasUjagar/Sudoku_GUI/assets/135226247/19484d3a-da24-4699-97f5-a6fef6a9f5c1
 
-https://www.youtube.com/watch?v=eqUwSA0xI-s&t=5s
-
-https://www.youtube.com/watch?v=lK4N8E6uNr4&t=37s
-
-https://www.youtube.com/watch?v=_Z9Mz2V-Mig
-
-https://www.youtube.com/watch?v=I2lOwRiGNy4                  (I have implemented my sudoku grid and formatted it based on this tutorial)
-
-https://www.youtube.com/watch?v=IyHb_g2kHDQ
 
 
