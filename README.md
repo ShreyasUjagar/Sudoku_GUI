@@ -2,12 +2,15 @@
 
 This is a Sudoku game implemented with the Python language and the Pygame Library. In order to play, you would need to have both installed on your system.
 
-It consists of several features such as an instant time solver, a checker that provides clear feedback, and a handful of additional puzzles.
+It consists of several features including a robust instant time solver, a razor-sharp checker that validates any user input, and an abundance of additional puzzles.
 
-The solver implements a recursive backtracking algorithm that works as follows.
-It inserts a valid number on the first empty slot, then goes to the next empty slot and does the same (until the puzzle has been solved).
+The solver implements a **recursive backtracking** algorithm that works as follows.
+This solver scans over all the Sudoku slots going left to right on each row, starting at the top most row.
+At the first empty slot it finds, it inserts the first valid number (starting from 1 to 9), then goes to the next empty slot and does the same (...until the puzzle has been solved).
 If it reaches a slot where every number from 1-9 is invalid, then it 'backtracks' and returns to the previous slot.
-The solver then inputs the next valid number into that previous slot and we continue moving forward.
+The solver then inputs the next valid number into that previous slot and we continue moving forward. This way, the solver will effeciently get to a solution in real time.
+
+How does it know if a number is valid or not at a certain position? It calls a method that takes the number at the slot, and the position of that slot (row,col) as arguements and linearly checks if there are any number conflicts.
 
 Please note that the solutions for the puzzles are **not hardcoded** into the game and the solver gets to an answer each and every time.
 
