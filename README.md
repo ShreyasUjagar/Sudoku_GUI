@@ -1,6 +1,7 @@
 # Sudoku GUI (Graphic Interface Model) by Shreyas Ujagar
 
-This is a Sudoku game implemented with the Python language and the Pygame Library. In order to play, you would need to have both installed on your system.
+This is a Sudoku game implemented with the Python language and the Pygame Library. In order to play, you would need to have both installed on your system. You can download
+[Python](https://www.python.org/downloads/) and [Pygame](https://pypi.org/project/pygame/) here on their official websites.
 
 It consists of several features including a robust instant time solver, a razor-sharp checker that validates any user input, and an abundance of additional puzzles.
 
@@ -10,7 +11,7 @@ At the first empty slot it finds, it inserts the first valid number (starting fr
 If it reaches a slot where every number from 1-9 is invalid, then it 'backtracks' and returns to the previous slot.
 The solver then inputs the next valid number into that previous slot and we continue moving forward. This way, the solver will effeciently get to a solution in real time.
 
-How does it know if a number is valid or not at a certain position? It calls a method that takes the number at the slot, and the position of that slot (row,col) as arguements and linearly checks if there are any number conflicts.
+How does it know if a number is valid or not at a certain position? The solver gets this information by calling an 'is_valid' method that takes as parameters the digit at the slot, and the position of that slot (row,col) and linearly checks if there are any number conflicts. The method will then accordingly return either the boolean value 'True' or 'False' back to the solver.
 
 Please note that the solutions for the puzzles are **not hardcoded** into the game and the solver gets to an answer each and every time.
 
